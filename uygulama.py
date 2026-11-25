@@ -14,14 +14,7 @@ from ultralytics import YOLO
 
 PROJE_KLASORU = Path(__file__).resolve().parent
 
-MODEL_DOSYASI = (
-    PROJE_KLASORU
-    / "sonuclar"
-    / "egitim"
-    / "ana_egitim"
-    / "weights"
-    / "best.pt"
-)
+MODEL_DOSYASI = PROJE_KLASORU / "modeller" / "best.pt"
 
 if not MODEL_DOSYASI.exists():
     raise FileNotFoundError("Eğitilmiş model bulunamadı!")
